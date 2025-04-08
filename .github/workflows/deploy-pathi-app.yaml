@@ -20,7 +20,7 @@ jobs:
         id: set-commit-id
         run: echo "commit_id=${GITHUB_SHA::7}" >> $GITHUB_OUTPUT
  
-  deploy-thinesh-app:
+  deploy-pathi-app:
     needs: [git-commit-info]
     runs-on: ubuntu-latest
     steps:
@@ -43,7 +43,7 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
  
-      - name: Deploy Thinesh Application to Container App
+      - name: Deploy Pathi Application to Container App
         uses: azure/container-apps-deploy-action@v1
         with:
           appSourcePath: ${{ github.workspace }}
