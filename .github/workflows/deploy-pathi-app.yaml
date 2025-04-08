@@ -48,8 +48,8 @@ jobs:
         with:
           appSourcePath: ${{ github.workspace }}
           acrName: acrpcsregistry
-          acrUsername: ${{ secrets.DOCKER_USERNAME }}
-          acrPassword: ${{ secrets.DOCKER_PASSWORD }}
+          acrUsername: ${{ secrets.ACR_USERNAME }}
+          acrPassword: ${{ secrets.ACR_PASSWORD }}
           containerAppName: surya-aca-poc
           containerAppEnvironment: managedEnvironment-PCSODCTEMP-81bc
           resourceGroup: ${{ secrets.RESOURCE_GROUP_NAME }}
